@@ -1,0 +1,19 @@
+body {
+    background-image: url("../images/analog-art-camera-390089.jpg");
+    background-position: center cover fixed;
+    background-size: 100%;
+}
+
+.container {
+    background: rgba(red, green, blue, alpha);
+    background-color: rgba(148 135 148);
+    opacity: .7;
+    width: 900px;
+    height: 600px;
+    margin-top: 50px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
