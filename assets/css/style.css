@@ -6,14 +6,34 @@ body {
 
 .container {
     background: rgba(red, green, blue, alpha);
-    background-color: rgba(148 135 148);
-    opacity: .7;
-    width: 900px;
-    height: 600px;
+    background-color: rgba(173 164 174);
+    opacity: .9;
+    width: 1100px;
+    height: 630px;
     margin-top: 50px;
+    border-radius: 25px;
 }
 
 h1 {
     text-align: center;
     color: white;
+}
+
+p {
+    color: black;
+}
+
+#question-1,
+#question-2,
+#question-3,
+#question-4,
+#question-5,
+#question-6,
+#question-7,
+#question-8,
+#question-9,
+#question-10
+ {
+    color: black;
+    text-align: center;
 }
