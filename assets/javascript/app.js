@@ -87,8 +87,67 @@ var trivia = {
         }
 
         gameStatus.displayResults(correctA, incorrectA, unansweredQ);
-    },
+    }
 }
+
+var allQuestions = 
+[
+    { 
+        question: "1) Which of these is NOT a Tarantino movie?",
+        answers: ["Django Unchained", "Inglorious Bastards", "From Dusk Till Dawn", "The Royal Tenenbaums"],
+        correct: "The Royal Tenenbaums"
+
+    },
+
+    { 
+        question: "2) What best describes the style of Wes Anderson?",
+        answers: ["Dark mystery", "Bloody joy", "Aesthetic perfection", "Rainbows and unicorns"],
+        correct: "Aesthetic perfection"
+
+    },
+
+    { 
+        question: "3) Which part of his body did Charlie Chaplin insure?",
+        answers: ["Hands", "Feet", "Legs", "Eyes"],
+        correct: "Feet"
+
+    },
+
+    { 
+        question: "4) In Hitchcock's film 'The trouble with Harry' what was the trouble?",
+        answers: ["He was upset", "He killed his wife", "He was dead", "He had one eye"],
+        correct: "He was dead"
+
+    },
+
+    { 
+        question: "5) In the original film, who steals the Pink Panther?",
+        answers: ["The bad bad thief", "The Phantom", "Inspector Clouseau", "Sir Charles Litton"],
+        correct: "The Phantom"
+
+    },
+
+    { 
+        question: "6) Which movie is this quote from 'When I got tired, I slept. When I got hungry, I ate. When I had to go, you know, I went.'?",
+        answers: ["The Green Mile", "Forrest Gump", "Catch Me If You Can", "Saving Private Ryan"],
+        correct: "Forrest Gump"
+
+    },
+
+    { 
+        question: "7) Which of these is NOT a musical?",
+        answers: ["Les Miserables", "Chicago", "Hamilton", "Bohemian Rhapsody"],
+        correct: "Bohemian Rhapsody"
+
+    },
+
+    { 
+        question: "8) Which of these movie directors won the most Oscars throughout the history?",
+        answers: ["John Ford", "William Wyler", "Francis Ford Coppola", "Martin Scorcese"],
+        correct: "John Ford"
+
+    }
+]
 //     //event listeners
 //     $("#rem-time").hide();
 //     $("#start").on('click', trivia.startGame);
