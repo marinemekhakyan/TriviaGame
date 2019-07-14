@@ -4,7 +4,7 @@ body {
     background-size: 100%;
 }
 
-.questions-container {
+.main-container {
     background: rgba(red, green, blue, alpha);
     background-color: rgba(173 164 174);
     opacity: .9;
@@ -14,15 +14,23 @@ body {
     margin-left: 20%;
 }
 
-h1 {
+h1, h2, h3 {
     text-align: center;
     color: white;
+    font-family: 'Barriecito';
 }
 
 p {
     color: #502B3A;
     font-size: 18px;
     font-weight: bold;
+}
+
+#intro {
+    font-size: 20px;
+    color: white;
+    font-family: 'Barriecito';
+    text-align: center;
 }
 
 #question-1,
@@ -40,9 +48,10 @@ p {
     text-align: center;
 }
 
-button {
+#done-button, #start-button {
     font-size: 20px;
-    margin-left: 410px;
+    /* margin-left: 410px; */
+    margin-right: 100 px;
     margin-top: 10px;
     border-radius: 12px;
     background-color: white;
