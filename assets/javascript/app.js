@@ -54,13 +54,40 @@ var trivia = {
             var answer3 = allQuestions[i].answers[2];
             var answer4 = allQuestions[i].answers[3];
 
-            qContainer.append('<div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="inlineCheckbox1'+i+'" value="option1'+i+'"><label class="form-check-label" for="inlineCheckbox1'+i+'">' + answer1 + ' </label></div>');
-            qContainer.append('<div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="inlineCheckbox2'+i+'" value="option2'+i+'"><label class="form-check-label" for="inlineCheckbox2'+i+'">' + answer2 + ' </label></div>');
-            qContainer.append('<div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="inlineCheckbox3'+i+'" value="option3'+i+'"><label class="form-check-label" for="inlineCheckbox3'+i+'">' + answer3 + ' </label></div>');
-            qContainer.append('<div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="inlineCheckbox4'+i+'" value="option4'+i+'"><label class="form-check-label" for="inlineCheckbox4'+i+'">' + answer4 + ' </label></div>');
+            qContainer.append('<div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="inlineCheckbox'+i+'" value="option1'+i+'"><label class="form-check-label" for="inlineCheckbox1'+i+'">' + answer1 + ' </label></div>');
+            qContainer.append('<div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="inlineCheckbox'+i+'" value="option2'+i+'"><label class="form-check-label" for="inlineCheckbox2'+i+'">' + answer2 + ' </label></div>');
+            qContainer.append('<div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="inlineCheckbox'+i+'" value="option3'+i+'"><label class="form-check-label" for="inlineCheckbox3'+i+'">' + answer3 + ' </label></div>');
+            qContainer.append('<div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="inlineCheckbox'+i+'" value="option4'+i+'"><label class="form-check-label" for="inlineCheckbox4'+i+'">' + answer4 + ' </label></div>');
 
         }
-    }
+
+        var doneButton = '<button class="btn btn-primary" id="done-button" type="submit">DONE</button>';
+        qContainer.append(doneButton);
+        $("#done-button").on("click", gameStatus.stopTimer);
+    },
+
+    checkAnswers: function() {
+        var correctAnswer;
+        var chosenAnswer;   
+        var correctA = 0;
+        var incorrectA = 0;
+        var unansweredQ = 0;
+
+        for (var i = 0; i < allQuestions.length; i ++) {
+            correctAnswer = allQuestions[i].correct;
+            chosenAnswer = $('input[id = inlineCheckbox '+i+']:checked + label').text();
+
+            if (chosenAnswer === correctAnswer) {
+                correctA++;
+            } else if (chosenAnswer !== correctAnswer) {
+                {
+                    incorrectA++;
+                }
+            }
+        }
+
+        gameStatus.displayResults(correctA, incorrectA, unansweredQ);
+    },
 }
 //     //event listeners
 //     $("#rem-time").hide();
