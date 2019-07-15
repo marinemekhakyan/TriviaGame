@@ -12,224 +12,124 @@
 
 <body >
 <div class = "main-container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+          <h1 class="display-3">READY, SET, TRIVIA!</h1>
+          <hr>
+        </div>
 
-    <div class="header text-center clearfix"></div>
+    <!-- <div class="offset-md-1"></div> -->
 
-    <h1>READY, SET, TRIVIA!</h1>
-
-    <h3 id="timer"></h3>
-
+      <div class="col-md-10">
     <div id="start-page" class="start-page-text">
-      <p id="intro"> Fond of the motion picture? This Trivia is for you! You have 80 seconds to answer all the questions and the game will end automatically after the time is up. Good luck!</p>
-      <div class="btn btn-primary" id="start-button">START
+      <p id="intro">Fond of the motion picture? This Trivia is for you! You have 120 seconds to answer all the questions and the game will end automatically after the time is up. Good luck!</p>
+      <div class="btn btn-primary" id="start">START
       </div>
     </div>
 
     <hr>
-    <div class = "trivias"></div>
+   
 
-    <div class="hidden" id="end-game">
-      <h2>YOUR SCORES:</h2>
-      <p id="correct-answers"></p>
-      <p id="incorrect-answers"></p>
-      <p id="unanswered"></p>
+    </div>
+     <div id="finalScore">
+        <div id="row">
+            <div id="col-sm"> 
+
+            <h4 id="correctAnswers">Correct Answers: 0</h4>
+            <h4 id="incorrectAnswers">Incorrect Answers: 0</h4>
+            <h4 id="unanswered">Unanswered: 8</h4>             
+
+
+            </div>
+        </div>
+        </div>
+<br>
+
+<div id="questions-box">
+    <div id="row">
+        <div id="col-md-8">            
+            <h4 id="timeRemaining">Time Remaining: <span id="seconds">00</span></h4>
+            <br>
+    <div id="q1">
+        <p>Which one of these is NOT a Tarantino movie?</p>   
+        <input type="radio" name="tarantino" value="1"> Django Unchained</input>
+        <input type="radio" name="tarantino" value="2"> Inglorious Bastards</input>
+        <input type="radio" name="tarantino" value="3"> From Dusk Till Dawn</input>
+        <input type="radio" name="tarantino" value="4"> The Royal Tenenbaums</input>
+        <br><br>
+    </div>
+     
+    <div id="q2">        
+        <p>What best describes the style of Wes Anderson?</p>
+        <input type="radio" name="anderson" value="1"> Dark Mystery</input>
+        <input type="radio" name="anderson" value="2"> Bloody Joy</input>
+        <input type="radio" name="anderson" value="3"> Aesthetic Perfection</input>
+        <input type="radio" name="anderson" value="4"> Rainbows & Unicorns</input>
+        <br><br>
+    </div>
+    
+    <div id="q3">
+        <p>Which part of his body did Charlie Chaplin insure?</p> 
+        <input type="radio" name="chaplin" value="1"> Hands</input>
+        <input type="radio" name="chaplin" value="2"> Feet</input>
+        <input type="radio" name="chaplin" value="3"> Eyes</input>
+        <input type="radio" name="chaplin" value="4"> Legs</input>
+        <br><br>
+    </div>
+    
+    <div id="q4">
+        <p>In Hitchcock's film "The trouble with Harry" what was the trouble?</p>
+        <input type="radio" name="hitchcock" value="1"> He was upset</input>
+        <input type="radio" name="hitchcock" value="2"> He killed his wife</input>
+        <input type="radio" name="hitchcock" value="3"> He was dead</input>
+        <input type="radio" name="hitchcock" value="4"> He had one eye</input>
+        <br><br>
     </div>
 
-    <!-- <div id="question-1"><p>1) Which of these is NOT a Tarantino movie?</p>
-    <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-        <label class="form-check-label" for="inlineCheckbox1">1. Django Unchained</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-        <label class="form-check-label" for="inlineCheckbox2">2. Inglorious Bastards</label>
-      </div>
-      <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option2">
-            <label class="form-check-label" for="inlineCheckbox3">3. From Dusk Till Dawn</label>
-        </div>
-        <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                <label class="form-check-label" for="inlineCheckbox4">4. The Royal Tenenbaums</label>
-              </div>
-            </div>
+    <div id="q5">
+        <p>In the original film, who steals the Pink Panther?</p>
+        <input type="radio" name="panther" value="1"> The bad bad thief</input>
+        <input type="radio" name="panther" value="2"> The Phantom</input>
+        <input type="radio" name="panther" value="3"> Inspector Clouseau</input>
+        <input type="radio" name="panther" value="4"> Sir Charles Litton</input>
+        <br><br>
+    </div>
 
-            <br>
-            <div id="question-2"><p>2) What best describes the style of Wes Anderson?</p>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">1. Dark Mystery</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                    <label class="form-check-label" for="inlineCheckbox2">2. Bloody Joy</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option2">
-                        <label class="form-check-label" for="inlineCheckbox3">3. Aesthetic Perfection</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox4">4. Rainbows & Unicorns</label>
-                          </div>
-                        </div>
+    <div id="q6"><p> Which movie is this quote from "When I got tired, I slept. When I got hungry, I ate. When I had to go, you know, I went."In the original film, who steals the Pink Panther?</p>
+        <input type="radio" name="gump" value="1"> The Green Mile</input>
+        <input type="radio" name="gump" value="2"> Forrest Gump</input>
+        <input type="radio" name="gump" value="3"> Catch Me If You Can</input>
+        <input type="radio" name="gump" value="4"> Saving Private Ryan</input>
+        <br><br>
+    </div>
 
-                        <br>
-            <div id="question-3"><p>3) Which part of his body did Charlie Chaplin insure?</p>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">1. Hands</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                    <label class="form-check-label" for="inlineCheckbox2">2. Feet</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option2">
-                        <label class="form-check-label" for="inlineCheckbox3">3. Eyes</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox4">4. Legs</label>
-                          </div>
-                        </div>
+    <div id="q7">
+        <p>Which of these is NOT a musical?</p>
+        <input type="radio" name="musical" value="1"> Les Miserables</input>
+        <input type="radio" name="musical" value="2"> Chicago</input>
+        <input type="radio" name="musical" value="3"> Hamilton</input>
+        <input type="radio" name="musical" value="4"> Bohemian Rhapsody</input>
+        <br><br>
+    </div>
 
-                        <br>
-            <div id="question-3"><p>4) In Hitchcock's film "The trouble with Harry" what was the trouble?</p>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">1. He was upset</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                    <label class="form-check-label" for="inlineCheckbox2">2. He killed his wife</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option2">
-                        <label class="form-check-label" for="inlineCheckbox3">3. He was dead</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox4">4. He had one eye</label>
-                          </div>
-                        </div>
+    <div id="q8">
+        <p>Which of these movie directors won the most Oscars throughout the history? </p>
+        <input type="radio" name="director" value="1"> John Ford</input>
+        <input type="radio" name="director" value="2"> William Wyler</input>
+        <input type="radio" name="director" value="3"> Francis Ford Coppola</input>
+        <input type="radio" name="director" value="4"> Martin Scorcese</input>
+        <br><br>
+    </div>
 
-                         <br>
-            <div id="question-3"><p>5) In the original film, who steals the Pink Panther?</p>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">1. The bad bad thief</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                    <label class="form-check-label" for="inlineCheckbox2">2. The Phantom</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option2">
-                        <label class="form-check-label" for="inlineCheckbox3">3. Inspector Clouseau</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox4">4. Sir Charles Litton</label>
-                          </div>
-                        </div>
-
-                        <br>
-            <div id="question-3"><p>6) Which movie is this quote from "When I got tired, I slept. When I got hungry, I ate. When I had to go, you know, I went."?</p>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">1. The Green Mile</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                    <label class="form-check-label" for="inlineCheckbox2">2. Forrest Gump</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option2">
-                        <label class="form-check-label" for="inlineCheckbox3">3. Catch Me If You Can</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox4">4. Saving Private Ryan</label>
-                          </div>
-                        </div>
-
-                        <br>
-            <div id="question-3"><p>7) Which of these is NOT a musical?</p>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">1. Les Miserables</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                    <label class="form-check-label" for="inlineCheckbox2">2. Chicago</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option2">
-                        <label class="form-check-label" for="inlineCheckbox3">3. Hamilton</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbo4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox4">4. Bohemian Rhapsody</label>
-                          </div>
-                        </div>
-
-                        <br>
-            <div id="question-3"><p>8) Which of these films was the most expensive in production value?</p>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">1. Titanic</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                    <label class="form-check-label" for="inlineCheckbox2">2. Avengers: Endgame</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option2">
-                        <label class="form-check-label" for="inlineCheckbox3">3. Pirates of the Caribbean: On Stranger Tides</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox4">4. Solo: A Star Wars Story</label>
-                          </div>
-                        </div>
-                        <hr> -->
-                        
+    <button id="doneButton">DONE</button>
+    </div>
 </div>
-</body>
+</div>
+</div>
+</div>
+  </body>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="assets/javascript/app.js"></script>
 </html>
-
-
-
-<!-- Questions
-1) Which of these is NOT a Tarantino movie?
-1. Django Unchained 2. Inglorious Bastards 3. From Dusk Till Dawn 4. The Royal Tenenbaums
-
-2) Which one of these directors is no longer alive? 
-1. David Lynch 2. Alfred Hitchcock 3. Tim Burton 4. Wes Anderson
-
-3) Which of these movies was the most expensive in production value?
-1. Titanic 2. Avengers: Endgame 3. Pirates of the Caribbean: On Stranger Tides 4. Solo: A Star Wars Story
-
-4) Which of these is NOT a musical?
-1. Les Miserables 2. Chicago 3. Hamilton 4. Bohemian Rhapsody
-
-5) What best describes the style of Wes Anderson?
-1. Dark mystery 2. Bloody joy 3. Aesthetic perfection 4. Rainbows and unicorns
-
-6) Which of these movie directors won the most Oscars throughout the history? 
-1. John Ford 2. William Wyler 3. Francis Ford Coppola 4. Martin Scorsese
-
-7) Which part of his body did Charlie Chaplin insure?
-1. Hands 2. Feet 3. Eyes 4. Legs 
-
-8) In Hitchcock's film "The trouble with Harry" what was the trouble? 
-1. He was upset 2. He killed his wife 3. He was dead 4. He had one eye
-
-9) In the original film who steals the Pink Panther? 
-1. The bad bad thief 2. The phantom 3. Inspector Clouseau 4. Sir Charles Litton
-
-10) Which movie is this quote from "When I got tired, I slept. When I got hungry, I ate. When I had to go, you know, I went."?
-1. The Green Mile 2. Forrest Gump 3. Catch me if you can 4. Saving Private Ryan -->
