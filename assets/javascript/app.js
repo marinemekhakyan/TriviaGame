@@ -20,15 +20,18 @@ $(document).ready(function(){
             }
     
             function decrement() {
-                seconds --;
+                console.log("decrement");
+                seconds--;
+                
     
                 if (seconds === 0) {
                     stop();
+                    console.log(seconds)
                 }
 
-                function stop() {
-                    clearInterval(intervalId);
-                }
+                // function stop() {
+                //     clearInterval(intervalId);
+                // }
     
                 if (seconds < 10) {
                     $("#seconds").text("0" + seconds)
@@ -43,7 +46,7 @@ $(document).ready(function(){
     
         function countScore(userAnswer, answer) {
             if (!userAnswer) return;
-            if (userAnswer === answer) {
+            if (userAnswer == answer) {
                 correctAnswers++;
                 unanswered--;
     
@@ -51,7 +54,7 @@ $(document).ready(function(){
                 incorrectAnswers++;
                 unanswered--;
     
-            }
+            } 
         }
 
         countScore();
@@ -67,37 +70,41 @@ $(document).ready(function(){
             var answerEight = $('input[type="radio"][name="director"]:checked').val();
 
     
-            score(parseInt(answerOne), 4);
-            score(parseInt(answerTwo), 3);
-            score(parseInt(answerThree), 2);
-            score(parseInt(answerFour), 3);
-            score(parseInt(answerFive), 2);
-            score(parseInt(answerSix), 2);
-            score(parseInt(answerSeven), 4);
-            score(parseInt(answerEight), 1);
+            countScore(parseInt(answerOne), 4);
+            countScore(parseInt(answerTwo), 3);
+            countScore(parseInt(answerThree), 2);
+            countScore(parseInt(answerFour), 3);
+            countScore(parseInt(answerFive), 2);
+            countScore(parseInt(answerSix), 2);
+            countScore(parseInt(answerSeven), 4);
+            countScore(parseInt(answerEight), 1);
 
 
             stop();
-    
+            showResults();
         });
     
         function showResults() {
             $("#questions-box").hide();
             $("#doneButton").hide();
             $("#finalScore").show();
+
+            
         }
     
         function stop() {
             clearInterval(intervalId);
-        
+            console.log("stop");
             scoreTableau();
             showResults();
         }
+    
     
         var scoreTableau = function () {
             $("#correctAnswers").text("Correct Answers: " + correctAnswers)
             $("#incorrectAnswers").text("Incorrect Answers: " + incorrectAnswers)
             $("#unanswered").text("Unanswered: " + unanswered);
+            console.log("scoreTableau")
         }
     
     
